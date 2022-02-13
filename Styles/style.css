@@ -1,0 +1,150 @@
+#party-debug {
+  display: none;
+}
+
+html {
+  user-select: none;
+  font-family: Agne;
+}
+
+.reveal {
+  display: block;
+}
+
+/* #defaultCanvas0 {
+  background-color: blue !important;
+  text-align: center;
+} */
+
+body {
+  display: flexbox;
+  margin: 8px;
+  /* justify-content: center; */
+  text-align: center;
+  background-color: #252422;
+}
+
+@font-face {
+  font-family: Agne;
+  src: url("../Assets/fonts/AgneDemoVersion.otf");
+}
+h1 {
+  font-family: Agne;
+  font-size: 70px;
+  color: #fffcf2;
+  text-decoration: none;
+}
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+h1:hover {
+  color: #eb5e28;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+#serverToggle {
+  background-color: rgba(221, 209, 209, 0.452);
+  border-radius: 30%;
+  border: 1px solid black;
+  background-color: rgb(209, 244, 255);
+  color: black;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+canvas {
+  width: 60% !important;
+  height: 60% !important;
+  border: outset #fffcf2;
+  border-radius: 1%;
+  cursor: none;
+  position: relative;
+}
+
+.button {
+  background-color: rgb(39, 26, 26);
+  color: white;
+  padding: 15px 25px;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 5%;
+  position: relative;
+}
+
+.button:hover {
+  background-color: #eb5e28;
+}
+
+.home {
+  /* background-color: #2f4b2f; */
+  height: 100vh;
+  display: flexbox;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.home-image {
+  width: 70%;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+img {
+  width: 70%;
+}
+
+.instructions {
+  background-color: #252422;
+  border: solid #fffcf2;
+  border-radius: 1%;
+  color: #fffcf2;
+  font-family: Agne;
+}
+.instructions:hover {
+  background-color: #eb5e28;
+}
+
+#popup {
+  height: 40vh;
+  width: 50vw;
+  left: 25vw;
+  background-color: #252422;
+  border: solid #fffcf2;
+  border-radius: 1%;
+  padding: 2vh;
+  cursor: none;
+  position: absolute;
+  z-index: 1;
+
+  opacity: 0;
+}
+
+#popup.show {
+  opacity: 1;
+}
+
+h2 {
+  text-align: left;
+  color: #fffcf2;
+  font-size: 30px;
+}
+p {
+  color: #fffcf2;
+  font-size: 25px;
+}
+span {
+  color: #eb5e28;
+}
