@@ -3,7 +3,7 @@ let shared;
 let me;
 
 let tick_sound;
-let chime_sound;
+
 let wipe;
 
 
@@ -11,7 +11,7 @@ let wipe;
 function preload() {
   partyConnect(
     "wss://deepstream-server-1.herokuapp.com",
-    "Bermuda",
+    "Bermuda_Triangle",
     "main"
   );
   shared = partyLoadShared("globals");
@@ -25,7 +25,7 @@ function setup() {
   createCanvas(600, 300);
 
   tick_sound = loadSound('../Assets/audio/tick.mp3');
-  chime_sound = loadSound('../Assets/audio/chime.mp3');
+
   wipe = loadSound('../Assets/audio/wipe.mp3');
 
   tick_sound.setVolume(0.1);
@@ -243,23 +243,13 @@ function draw() {
   if (dist(shared.x1, shared.y1, shared.a1, shared.b1) < 5 && dist(shared.x2, shared.y2, shared.a2, shared.b2) < 5 && dist(shared.x3, shared.y3, shared.a3, shared.b3) < 5) {
     fill(color(235, 94, 40));
     triangle(shared.a1, shared.b1, shared.a2, shared.b2, shared.a3, shared.b3);
-    // chime_sound.play();
 
-    // if (chime_sound.isPlaying()) {
-    //   // .isPlaying() returns a boolean
-    //   chime_sound.stop();
-    // }
   
     
   } else if (dist(shared.e1, shared.f1, shared.c1, shared.d1) < 5 && dist(shared.e2, shared.f2, shared.c2, shared.d2) < 5 && dist(shared.e3, shared.f3, shared.c3, shared.d3) < 5) {
     fill(color(235, 94, 40));
     triangle(shared.c1, shared.d1, shared.c2, shared.d2, shared.c3, shared.d3);
-    // chime_sound.play();
 
-    // if (chime_sound.isPlaying()) {
-    //   // .isPlaying() returns a boolean
-    //   chime_sound.stop();
-    // }
   }
   
 
