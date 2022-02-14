@@ -2,9 +2,9 @@ let shared;
 
 let me;
 
-let tick_sound;
+// let tick_sound;
 
-let wipe;
+// let wipe;
 
 
 
@@ -24,11 +24,11 @@ function preload() {
 function setup() {
   createCanvas(600, 300);
 
-  tick_sound = loadSound('../Assets/audio/tick.mp3');
+  // tick_sound = loadSound('../Assets/audio/tick.mp3');
 
-  wipe = loadSound('../Assets/audio/wipe.mp3');
+  // wipe = loadSound('../Assets/audio/wipe.mp3');
 
-  tick_sound.setVolume(0.1);
+  // tick_sound.setVolume(0.1);
 
   rectMode(CENTER);
   textAlign(CENTER, CENTER);
@@ -97,7 +97,7 @@ function mouseMoved(e) {
 
 function mousePressed() {
 
-  tick_sound.play();
+  // tick_sound.play();
 
   // if (song.isPlaying()) {
   //   // .isPlaying() returns a boolean
@@ -271,7 +271,7 @@ function keyPressed(){
   
   if (key == ' '){ 
 
-    wipe.play();
+    // wipe.play();
 
     shared.scoreA=0;
     shared.teamAScore = "";
