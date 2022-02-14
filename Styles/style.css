@@ -106,14 +106,14 @@ img {
   width: 70%;
 }
 
-.instructions {
+#instructions {
   background-color: #252422;
   border: solid #fffcf2;
   border-radius: 1%;
   color: #fffcf2;
   font-family: Agne;
 }
-.instructions:hover {
+#instructions:hover {
   background-color: #eb5e28;
 }
 
@@ -145,6 +145,22 @@ p {
   color: #fffcf2;
   font-size: 25px;
 }
+pre {
+  color: #fffcf2;
+  font-size: 25px;
+  font-family: Agne;
+  /* color: #eb5e28; */
+}
 span {
   color: #eb5e28;
+}
+
+#P1 {
+  text-align: left;
+}
+
+#P2 {
+  text-align: right !important;
+  color: #fffcf2;
+  font-size: 25px;
 }

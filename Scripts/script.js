@@ -2,6 +2,11 @@ let shared;
 
 let me;
 
+let tick_sound;
+let chime_sound;
+let wipe;
+
+
 
 function preload() {
   partyConnect(
@@ -19,7 +24,11 @@ function preload() {
 function setup() {
   createCanvas(600, 300);
 
-  
+  tick_sound = loadSound('../Assets/audio/tick.mp3');
+  chime_sound = loadSound('../Assets/audio/chime.mp3');
+  wipe = loadSound('../Assets/audio/wipe.mp3');
+
+  tick_sound.setVolume(0.1);
 
   rectMode(CENTER);
   textAlign(CENTER, CENTER);
@@ -87,6 +96,17 @@ function mouseMoved(e) {
 }
 
 function mousePressed() {
+
+  tick_sound.play();
+
+  // if (song.isPlaying()) {
+  //   // .isPlaying() returns a boolean
+  //   song.stop();
+  //   background(255, 0, 0);
+  // } else {
+  //   song.play();
+  //   background(0, 255, 0);
+  // }
 
   
 
@@ -196,7 +216,7 @@ function draw() {
 
   
   //TEXT
-  textSize(20);
+  textSize(15);
   
   fill(255, 252, 242);
   text(shared.teamAScore, 150,280)
@@ -223,11 +243,23 @@ function draw() {
   if (dist(shared.x1, shared.y1, shared.a1, shared.b1) < 5 && dist(shared.x2, shared.y2, shared.a2, shared.b2) < 5 && dist(shared.x3, shared.y3, shared.a3, shared.b3) < 5) {
     fill(color(235, 94, 40));
     triangle(shared.a1, shared.b1, shared.a2, shared.b2, shared.a3, shared.b3);
+    // chime_sound.play();
+
+    // if (chime_sound.isPlaying()) {
+    //   // .isPlaying() returns a boolean
+    //   chime_sound.stop();
+    // }
   
     
   } else if (dist(shared.e1, shared.f1, shared.c1, shared.d1) < 5 && dist(shared.e2, shared.f2, shared.c2, shared.d2) < 5 && dist(shared.e3, shared.f3, shared.c3, shared.d3) < 5) {
     fill(color(235, 94, 40));
     triangle(shared.c1, shared.d1, shared.c2, shared.d2, shared.c3, shared.d3);
+    // chime_sound.play();
+
+    // if (chime_sound.isPlaying()) {
+    //   // .isPlaying() returns a boolean
+    //   chime_sound.stop();
+    // }
   }
   
 
@@ -248,6 +280,8 @@ function draw() {
 function keyPressed(){
   
   if (key == ' '){ 
+
+    wipe.play();
 
     shared.scoreA=0;
     shared.teamAScore = "";
@@ -282,22 +316,26 @@ function keyPressed(){
 window.addEventListener('DOMContentLoaded', async () => {
   console.log('DOM fully loaded and parsed');
 
-  const inst = await document.getElementById("instructions")
+  const inst = document.getElementById("instructions")
 
 const popup = document.getElementById("popup")
 
 
 
 console.log("hi");
-console.log("wtf"+popup);
+console.log(popup);
 console.log("why"+inst);
 
 
 
 inst.addEventListener("mouseover", respondMouseOver);
+inst.addEventListener("mouseout", respondMouseOut);
 
 function respondMouseOver(event) {
   popup.classList.add('show');
 }
+function respondMouseOut(event) {
+  popup.classList.remove('show');
+}
 
-}); 
+});

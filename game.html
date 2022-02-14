@@ -17,6 +17,8 @@
   <!-- p5 party -->
   <script src="https://cdn.jsdelivr.net/npm/p5.party@latest/dist/p5.party.js"></script>
 
+  <script src="Scripts/p5.sound.js"></script>
+
   
 
     <!--Tab Title-->
@@ -25,7 +27,7 @@
 
 <body>
     <a href="index.html"><h1>BermudA TriAngle</h1></a>
-    <button class="instructions">instructions</button>
+    <button id="instructions">Instructions</button>
     <br>
     <br>
     <br>
@@ -35,9 +37,12 @@
 
       <h2>Instructions</h2> 
       <br>
-      <p>This is a <span>2 player game</span> (can be played with more if u choose to).</p>
+      <p>This is a <span>2 player game</span> (can be played with more if you choose to).</p>
       <p>The goal is to match the shape of your triangle to the given triangle. Each click randomly resets the shape of your triangle, if you get one of your points close enough, it will fix in position. The first player (or team) to get all 3 points on the triangle wins.</p>
+      <p>The numbers on the upper corners represent the numbers of clicks</p>
       <p>Press the <span>spacebar</span> to reset.</p>
+      <br>
+      <pre>Player 1                      |                      Player 2</pre>
 
 
 
